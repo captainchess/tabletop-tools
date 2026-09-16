@@ -68,6 +68,13 @@ function doesStrikeCrit(attack, ac) {
  */
 function heal(maxHp, currentHp, healAmount) {
   // TODO
+  const damage = maxHp - currentHp;
+
+  if (healAmount >= damage) {
+    return 0
+  } else {
+    return maxHp - (currentHp + healAmount);
+  }
 }
 
 /**
