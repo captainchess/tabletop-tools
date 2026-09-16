@@ -8,10 +8,8 @@
 function canCastSpell(isSpellPrepared, hasScroll) {
   // TODO
   if (!isSpellPrepared && !hasScroll) {
-    console.debug('false');
     return false;
   }
-  console.debug('true');
   return true;
 }
 
@@ -25,10 +23,8 @@ function canCastSpell(isSpellPrepared, hasScroll) {
 function isHidden(hiding, aware) {
   // TODO
   if (hiding || !aware) {
-    console.debug('true');
     return true;
   }
-  console.debug('false');
   return false;
 }
 
@@ -41,6 +37,10 @@ function isHidden(hiding, aware) {
  */
 function doesStrikeHit(attack, ac) {
   // TODO
+  if (attack <= ac)  {
+    return false;
+  }
+  return true;
 }
 
 /**
