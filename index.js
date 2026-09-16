@@ -195,4 +195,15 @@ function canSee(light, vision) {
  */
 function getStrikeDamage(attack, ac, damage) {
   // TODO
+  if (doesStrikeHit(attack, ac)) {
+    const cover = getCoverBonus(true, false);
+
+    if (doesStrikeCrit(attack, ac)) {
+      return (damage - cover) * 2;
+    } else {
+      return damage - cover;
+    }
+  } else {
+    return 0;
+  }
 }
