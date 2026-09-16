@@ -166,6 +166,21 @@ function getRemainingHp(maxHp, currentHp, damage) {
  */
 function canSee(light, vision) {
   // TODO
+  if (vision === "average") {
+    if (light != "bright") {
+      return false;
+    } else {
+      return true;
+    }
+  } else if (vision === "low-light") {
+    if (light === "dark") {
+      return false;
+    } else {
+      return true;
+    }
+  } else {
+    return true;
+  }
 }
 
 /**
